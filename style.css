@@ -1,0 +1,253 @@
+/*color
+#2B2D42 - Dark blue
+#8D99AE - Light blue
+#EDF2F4 - Blue to white
+#EF233C - Red*/
+
+/*----------------------Global styles---------------------------*/
+body{
+    font-family:'Open Sans', sans-serif;
+    margin: 0;
+}
+
+h1, h2{
+    font-family:'caveat', cursive;
+    font-weight:700;
+}
+
+h1{
+    font-size: 70px;
+}
+
+h2{
+    font-size: 50px;
+    margin-top:0;
+}
+
+h3{
+    margin:0;
+}
+
+/*----------------------Navigation---------------------------*/
+nav{
+    text-align:center;
+    position:fixed;
+    width:100%;
+    background-color: white;
+    top:0;
+}
+
+nav a{
+    display: inline-block;
+    margin: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size:20px;
+    text-transform:uppercase;
+    color: #2a3133;
+}
+
+@media (mid-width:440px){
+    nav a{
+        margin:14px;
+        font-size:16px;
+    }
+}
+
+/*----------------------Header only---------------------------*/
+header{
+    position:relative;
+    padding-top: 60px;
+    text-align:center;
+    /*background-color: #3b6791;*/
+    background:url("./assets/graston1.jpg");
+    /*color:8D99AE;*/
+}
+
+header h1, header h2{
+    color:#f8fbfc
+}
+
+header p{
+    color:aliceblue;
+    font-family:'Trebuchet MS';
+    opacity: 0.9;
+}
+
+h1{
+    margin:0;
+}
+
+.content-wrap{
+    display:flex;
+    align-items: center;
+    flex-direction: column;  /*手机屏幕*/
+    margin:0 auto;
+    padding: 60px 50px;
+    max-width:950px;
+    overflow:hidden;
+}
+
+@media (min-width:935px){
+    .content-wrap{
+        flex-direction: row;  /*宽屏要flex-direction变成row*/
+    }
+}
+
+/*手机屏幕上width height 分别是150 pixel, border-radius 50%可以让一个正方形image变成圆形*/
+.profile-img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+}
+
+@media(min-width:440px){
+    .profile-img{
+    width:200px;
+    height:200px;  
+    }
+}
+
+@media(min-width:935px){
+    .profile-img{
+    width:250px;
+    height:250px;  
+    }
+}
+
+.btn{
+    text-decoration: none;
+    background-color: #ca4353;
+    color:white;
+    padding:0 5px 0 5px;
+    
+
+}
+
+@media(min-width:440px){
+    .btn{
+        padding:12px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.download{
+    position:absolute;
+    right:15px;
+    bottom:10px;
+    position: fixed;
+}
+
+/*----------------------------Work-----------------------------*/
+.services{
+    padding-top:50px;
+    padding-bottom: 40px;
+    background-color:#EDF2F4
+}
+
+.work-wrapper{
+    margin:0 auto;   /*居中，就是0 auto*/
+    padding:0 30px; 
+    max-width:950px;  /*在宽屏上就不会过长*/
+
+}
+
+/*短屏幕上显示就是Block*/
+.job-wrapper{
+    display:block;
+    padding-bottom: 30px;
+}
+
+/*935px屏幕上要变成grip,最后出来短屏幕就是上下结构（公司，经验），长屏就是左右结构 */
+@media (min-width:935px){
+    .job-wrapper{
+        display: grid;
+        grid-template-columns:1fr 2.5fr;   /*grid值得深入研究，1：2.5关系*/
+        column-gap:30px;
+    }
+}
+h3~p{
+    margin:0;
+}
+
+@media (min-width:935px){
+    .job-description p:first-of-type {  /*job description下面第一个p*/
+         margin-top: 0;
+    }
+}
+
+ol li{
+    margin:7px 0;
+    padding-left:15px;
+}
+
+ol li a{
+    color:blue;
+}
+/*------------------------Education-----------------------*/
+
+.education{
+    padding:40px 0;
+    background: linear-gradient(rgba(141, 153, 174, 0.9), rgba(141, 153, 174, 0.8)),  /*渐变效果*/
+    url(./assets/shian1.jpg) no-repeat fixed;   /*没有fix的话，鼠标移动图片不会跟着移动*/
+    background-size: cover;
+}
+
+.education-wrapper{
+    margin:0 auto;   /*居中，就是0 auto*/
+    padding:0 30px; 
+    max-width:950px;  /*在宽屏上就不会过长*/
+}
+
+ul{
+    margin-top: 12px;
+}
+/*------------------------Footer-----------------------*/
+footer{
+    text-align:center;
+    background-color: #2B2D42;
+    color:#8D99AE;
+}
+
+.contact-wrapper{
+    margin:0 auto;
+    padding:50px 0;
+    max-width:900px;
+}
+
+.contact-buttons{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
+
+.media-pic{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    border:#BD99AE solid 2px;
+}
+
+.media-pic:hover{
+    transform:scale(1.1);
+}
+
+p+h3{
+    margin-top:30px;
+}
+
+footer p{
+    margin-top:50px;
+}
+
+.endding{
+    padding-top: 30px;
+    display: inline-block;
+    text-align:left;
+}
+
+.endding h4~p{
+    margin:5px;
+}
+
